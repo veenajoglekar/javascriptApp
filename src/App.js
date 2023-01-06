@@ -16,7 +16,6 @@ function App() {
   const getProfileList = () => {
     profileService.getProfileList().then(
       (res) => {
-        console.log(res.users)
         setProfileArr(res.users);
       }
     )
