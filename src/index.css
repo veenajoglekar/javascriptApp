@@ -19,3 +19,17 @@ code {
   font-size: 16px;
   color: #000000;
 }
+
+.custom-grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+
+.sidebar{
+  background-color: royalblue;
+}
+
+.main-body{
+  background-color: beige;
+}

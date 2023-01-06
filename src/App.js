@@ -17,11 +17,11 @@ function App() {
   return (
     <>
       {!show ? (
-        <div className="homepage">
+        <div style={{minHeight: '100%'}} className="homepage">
           <HomePage parentCallback={parentCallback} />
         </div>
       ) : (
-        <div className="profile">
+        <div style={{minHeight: '100%'}} className="profile">
           <ProfilePage />
         </div>
       )}
