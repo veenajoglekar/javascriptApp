@@ -3,26 +3,21 @@ import profileService from '../services/profile.service';
 import '../App.css'
 
 
-const HomePage = ({parentCallback}) =>  {
+const HomePage = ({ profiles, parentCallback}) =>  {
 
     const [ profileArr, setProfileArr ] = useState([]);
+    const [ nextArr, setNextArr ] = useState([]);
   
-    useEffect(
-      () => {
-        getProfileList();
-      }, []
-    )
-  
-    const getProfileList = () => {
-      profileService.getProfileList().then(
-        (res) => {
-          setProfileArr(res.users);
-        }
-      )
-    }
+    
+    useEffect( () => {
+      setProfileArr(profiles)
+    }, [profiles])
+    
 
     const profileSelected = (profile) => {
-        parentCallback(profile)
+        
+        parentCallback(profile);
+
     }
   
     return (

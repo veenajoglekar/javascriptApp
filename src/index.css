@@ -100,9 +100,32 @@ code {
 }
 
 .just-center *{
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .glasstext{
   opacity: 50%;
+}
+
+.cust-card{
+  position: absolute;
+  top: 90px;
+  left: 1150px;
+  width: 280px;
+  height: 400px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cust-card img{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.logoutbtn{
+  margin-bottom: 10px;
+  border-radius: 30px;
 }

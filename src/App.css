@@ -4,7 +4,6 @@
   left: 525px;
   width: 500px;
   height: 500px !important;
-  background-color: red;
   z-index: 99;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -49,4 +48,9 @@
 
 .mapContainer{
   margin-left: 20px;
+}
+
+.cont-center *{
+  margin-left: auto;
+  margin-right: auto;
 }
