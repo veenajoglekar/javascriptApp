@@ -7,9 +7,11 @@ import ProfilePage from "./views/ProfilePage";
 
 function App() {
   const [show, setShow] = useState(false);
+  const [profile, setProfile ] = useState({});
 
   const parentCallback = (profile) => {
     console.log(`Profile selected : ${profile.name}`)
+    setProfile(profile)
     setShow(true)
   }
 
@@ -17,12 +19,12 @@ function App() {
   return (
     <>
       {!show ? (
-        <div style={{minHeight: '100%'}} className="homepage">
+        <div style={{minHeight: '100%'}} className="homepage ht-100">
           <HomePage parentCallback={parentCallback} />
         </div>
       ) : (
-        <div style={{minHeight: '100%'}} className="profile">
-          <ProfilePage />
+        <div style={{minHeight: '100%'}} className="profile ht-100">
+          <ProfilePage profileData={profile} />
         </div>
       )}
 

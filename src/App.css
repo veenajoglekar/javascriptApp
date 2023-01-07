@@ -31,11 +31,22 @@
   cursor: pointer;
 }
 
-.imgRnd{
-  border-radius: 50%;
-} 
 
 .container-fluid {
   padding: 0px !important;
   margin: 0px !important;
 } 
+
+.cust-grid{
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+}
+
+.mapContainer div div{
+  height: 350px !important;
+  width: 600px !important;
+}
+
+.mapContainer{
+  margin-left: 20px;
+}
