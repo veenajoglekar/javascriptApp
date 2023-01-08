@@ -54,3 +54,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.cp{
+  cursor: pointer;
+}

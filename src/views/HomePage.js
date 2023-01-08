@@ -22,7 +22,8 @@ const HomePage = ({ profiles, parentCallback}) =>  {
   
     return (
       <div className="App">
-        <div className="card" style={{ overflowY: 'auto', overflowX: 'hidden'}}>
+        <div className="card scrollbar scrollbar-default cScroll" style={{ overflowY: 'auto', overflowX: 'hidden'}}>
+        {/* <a href="https://areaaperta.com/nicescroll/" target="_blank">Nicescroll</a> */}
           <div className="container-fluid">
             <div className="d-flex align-items-center justify-content-center">
               <p className="mt-4 textcss">Select an Account</p>

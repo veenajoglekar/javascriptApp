@@ -4,7 +4,7 @@ import MyMap from "./MyMap";
 
 const ProfilePage = ({ profileData, nextArr, parentCallback }) => {
   const [selectedMenu, setSelectedMenu] = useState("profile");
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const mapping = {
     profile: "Profile",
     posts: "Posts",
@@ -15,10 +15,11 @@ const ProfilePage = ({ profileData, nextArr, parentCallback }) => {
   useEffect(() => {}, [profileData]);
 
   const openPopup = () => {
-    console.log("Hehe");
+    setShowPopup(!showPopup)
   };
 
   const openProfile = (profile) => {
+    setShowPopup(false)
     parentCallback(profile);
   };
 
@@ -28,7 +29,7 @@ const ProfilePage = ({ profileData, nextArr, parentCallback }) => {
 
   return (
     <>
-      <div className="container-fluid ht-100">
+      <div className="container-fluid ht-100" onClick={() => { showPopup && setShowPopup(false)}}>
         <div className="custom-grid">
           <div className="sidebar ht-100">
             <div className="inner-sidebar d-flex align-items-center">
@@ -98,7 +99,7 @@ const ProfilePage = ({ profileData, nextArr, parentCallback }) => {
                 <div className="col-3 offset-6" style={{ marginLeft: "auto" }}>
                   <li
                     onClick={() => openPopup()}
-                    className="row align-items-center"
+                    className="row align-items-center cp"
                   >
                     <div className="col-1">
                       <img
@@ -270,13 +271,15 @@ const ProfilePage = ({ profileData, nextArr, parentCallback }) => {
           </div>
         </div>
       </div>
+      {
+        showPopup && (
       <div className="logout-popup">
         <div className="cust-card just-center">
           <img className="mt-4" src={profileData?.profilepicture} />
           <h5>{profileData?.name}</h5>
           <h6 className="glasstext">{profileData?.email}</h6>
           <hr className="ml-2 mr-2" />
-          <div className="mb-4">
+          <div className="mb-4 cp">
             {nextArr.map((x) => {
               return (
                 <li
@@ -298,6 +301,9 @@ const ProfilePage = ({ profileData, nextArr, parentCallback }) => {
           <button className="btn btn-danger logoutbtn" onClick={()=>logout()}>Sign Out</button>
         </div>
       </div>
+            
+        )
+      }
     </>
   );
 };

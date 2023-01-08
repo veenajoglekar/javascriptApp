@@ -127,5 +127,9 @@ code {
 
 .logoutbtn{
   margin-bottom: 10px;
-  border-radius: 30px;
+  border-radius: 30px !important;
+}
+
+#cScroll {
+  background: url(http://lorempixel.com/100/600/nature/3/);
 }
